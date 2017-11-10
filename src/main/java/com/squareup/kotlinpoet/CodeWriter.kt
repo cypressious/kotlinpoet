@@ -276,6 +276,12 @@ internal class CodeWriter constructor(
     }
   }
 
+  fun openWrappingGroup() = out.openWrappingGroup()
+
+  fun closeWrappingGroup() {
+    trailingNewline = out.closeWrappingGroup()
+  }
+
   fun emitWrappingSpace() = apply {
     out.wrappingSpace(indentLevel + 2)
   }
